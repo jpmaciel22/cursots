@@ -62,3 +62,8 @@ completeOrder(1);
 console.log('Menu:', menu);
 console.log('Fila de Pedidos:', orderQueue);
 console.log(`R$${dinheiroNoCaixa}`);
+
+function Somar(x : number | undefined, y: number | undefined){
+    console.log(`${x+y}`)
+}
+Somar(1,2)
