@@ -5,7 +5,7 @@ interface MenuPizza {
 
 interface Order {
     pizza: string;
-    status: string;
+    status: 'completed' | 'ordered';
     id: number;
 }
 
@@ -28,7 +28,7 @@ function placeOrder(pizzaName: string): Order {
     const pizza = menu.find(pizza => pizza.name === pizzaName);
     if (pizza) {
         dinheiroNoCaixa += pizza.price;
-        const orderObj = { pizza: pizza.name, status: 'ordered', id: nextOrderId++ };
+        const orderObj: Order = { pizza: pizza.name, status: 'ordered', id: nextOrderId++ };
         orderQueue.push(orderObj);
         return orderObj;
     } else {
