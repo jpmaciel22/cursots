@@ -24,7 +24,7 @@ function AdicionaPizza(pizzaObj: MenuPizza): void {
   menu.push(pizzaObj);
 }
 
-function placeOrder(pizzaName: string): Order {
+function placeOrder(pizzaName: string): Order | undefined {
   const pizza = menu.find((pizza) => pizza.name === pizzaName);
   if (pizza) {
     dinheiroNoCaixa += pizza.price;
@@ -41,7 +41,7 @@ function placeOrder(pizzaName: string): Order {
   }
 }
 
-function completeOrder(orderID: number): Order {
+function completeOrder(orderID: number): Order | undefined{
   const order = orderQueue.find((order) => order.id === orderID);
   if (order) {
     order.status = 'completed';
