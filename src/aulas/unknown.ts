@@ -9,7 +9,7 @@ const y = 800;
 // é permitido fazer estas operacoes caso haja uma checagem antes
 // o exemplo a seguir funciona:
 
-if(typeof x === 'number') console.log(x+y)
+if(typeof x === 'number') console.log(x+y);
 
 
 // ----------------------------
@@ -20,4 +20,20 @@ function addOrConcat(a: number | string, b: number | string) {
 
   // percebe-se que agora o typescript aceita essas condicoes e já propõe como retorno
   // string | number
+};
+
+// agora é uma anotacao de tipos literais mas é importante guardar q isto é possivel de ser feito:
+const a : 100 = 100; // a so pode ser 100
+
+const person = {
+  name: 'Joao' as const,
+  familyName: 'Maciel',
 }
+// portanto agora person.name só pode ser atribuido 'Joao'.
+
+function escolhaCor(cor: 'Vermelho' | 'Amarelo' | 'Azul'):string {
+  return cor;
+}
+console.log(escolhaCor('Azul')); // se nao for isso ele não aceitará.
+
+export default person;
