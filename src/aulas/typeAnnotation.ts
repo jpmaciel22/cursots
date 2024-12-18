@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // Tipos básicos ( aqui ocorre inferência de tipos.)
 let nome: string = 'joao';
 let idade: number = 2; // 10, 1.57, -5.55, 0xf00d, 0b1010, 0o7744
