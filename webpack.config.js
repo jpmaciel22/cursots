@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/aulas/webpack-aula/teste.ts',
+  entry: './src/aulas/webpack-aula/index.ts',
   module: {
     rules: [
       {
