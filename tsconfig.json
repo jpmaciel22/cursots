@@ -4,7 +4,7 @@
       "module": "CommonJS",
       "sourceMap": true,
       "lib": ["ESNext", "DOM",],
-      "outDir": "./dist",
+      "outDir": "./dist/assets/js",
       "strict": true,
       "esModuleInterop": true,
     },
@@ -12,4 +12,3 @@
       "./src"
     ]
   }
-  
