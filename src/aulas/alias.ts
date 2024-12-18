@@ -16,3 +16,13 @@ const p1: Pessoa = {
   salario: 0,
   favoriteGame: 'Dishonored'
 };
+
+// ---------------------- Interseção abaixo:
+type AB = 'A' | 'B'
+type AC = 'A' | 'C'
+type AD = 'A' | 'D'
+type Interseção = AB & AC & AD // = "A"
+
+type TemNome  = {nome: string}
+type TemIdade = {idade: number}
+type Pessoinha = TemNome & TemIdade
