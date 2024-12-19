@@ -1,14 +1,16 @@
 {
   "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/validator": "^13.12.2",
     "@typescript-eslint/eslint-plugin": "^8.17.0",
     "@typescript-eslint/parser": "^8.17.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.4.2",
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
-    "ts-loader": "^9.5.1",
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4"
   },
@@ -25,5 +27,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "validator": "^13.12.0"
   }
 }

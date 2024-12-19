@@ -1,7 +1,7 @@
 const path = require('path');
 // configura o frontend
 module.exports = {
-  entry: './src/aulas/webpack-aula/index.ts',
+  entry: './src/projeto-cadastro/index.ts',
   module: {
     rules: [
       {
