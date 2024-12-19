@@ -1,5 +1,5 @@
 const path = require('path');
-
+// configura o frontend
 module.exports = {
   entry: './src/aulas/webpack-aula/index.ts',
   module: {
