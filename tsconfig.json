@@ -4,10 +4,12 @@
       "target": "ES6",
       "module": "CommonJS",
       "sourceMap": true,
-      "lib": ["ESNext", "DOM",],
+      "lib": ["ESNext", "DOM"],
       "outDir": "./dist",
       "strict": true,
       "esModuleInterop": true,
+      "noEmitOnError": true,
+
     },
     "include": [
       "./src"

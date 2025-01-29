@@ -71,5 +71,3 @@ function Somar(x: number, y: number) {
   console.log(`${x + y}`);
 }
 Somar(1, 2);
-
-//
