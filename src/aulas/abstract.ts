@@ -6,6 +6,7 @@ export abstract class Personagem{
   ){}
 
   atacar(personagem: Personagem): void{
+    if(this.vida <= 0){return console.log(`${this.nome} morreu`)}
     console.log(`${this.nome} está atacando ${personagem.nome}.`)
     this.bordao()
     personagem.perderVida(this.ataque);
@@ -27,10 +28,16 @@ class Mago extends Personagem {
 }
 class Elfa extends Personagem {
   bordao():void{
-    console.log('Não perderei dessa vez...')
+    console.log('Não perderei dessa vez... 🧝‍♀️')
   }
 }
 
-const Joao = new Mago('Joao',130,99);
-const Maria = new Elfa('Maria',1000,25);
+const randataqueJ = Math.trunc(Math.random()* (85000-50000) + 50000)
+const randataqueM = Math.trunc(Math.random() * (470000 - 25000) + 25000)
+const Joao = new Mago('Joao',randataqueJ,46875);
+const Maria = new Elfa('Maria',randataqueM,150000);
+
 Joao.atacar(Maria);
+Joao.atacar(Maria);
+Maria.atacar(Joao)
+Joao.atacar(Maria)
