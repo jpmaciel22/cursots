@@ -2,7 +2,7 @@ export abstract class Personagem{
   constructor(
     protected nome: string,
     protected ataque: number,
-    protected vida: number,
+    public vida: number,
   ){}
 
   atacar(personagem: Personagem): void{
@@ -37,7 +37,12 @@ const randataqueM = Math.trunc(Math.random() * (470000 - 25000) + 25000)
 const Joao = new Mago('Joao',randataqueJ,46875);
 const Maria = new Elfa('Maria',randataqueM,150000);
 
-Joao.atacar(Maria);
-Joao.atacar(Maria);
-Maria.atacar(Joao)
-Joao.atacar(Maria)
+function rodarJogo(pers1:Mago,pers2:Elfa):void{
+  while(pers1.vida > 0 && pers2.vida > 0){
+    pers1.atacar(pers2)
+    pers1.atacar(pers2)
+    pers2.atacar(pers1)
+    }
+  }
+
+rodarJogo(Joao,Maria)
