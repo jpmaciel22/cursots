@@ -9,7 +9,6 @@ interface VideoPlayerElements{
 
 interface VideoPlayerProtocol {
   playToggle(): void;
-  stop(): void;
   executarPrograma(): void;
 }
 
@@ -29,7 +28,24 @@ export default class VideoPlayer implements VideoPlayerProtocol{
     this.frente = videoPlayerElements.frente;
     this.tras = videoPlayerElements.tras;
   }
+  fancyTimeFormat(duration: number) {
+    // Hours, minutes and seconds
+    const hrs = ~~(duration / 3600);
+    const mins = ~~((duration % 3600) / 60);
+    const secs = ~~duration % 60;
 
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    let ret = "";
+
+    if (hrs > 0) {
+      ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    }
+
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+
+    return ret;
+  }
   playToggle(): void{
     if(this.videoPlayer.paused){
       this.videoPlayer.play();
@@ -38,9 +54,6 @@ export default class VideoPlayer implements VideoPlayerProtocol{
       this.videoPlayer.pause();
       this.playButton.innerText = 'Play'
     }
-  }
-  stop(): void{
-  //
   }
   executarPrograma(): void{
   this.playButton.addEventListener('click', () => {
@@ -53,7 +66,7 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   })
   this.videoPlayer.addEventListener('timeupdate', () => {
     const progress = Math.trunc(this.videoPlayer.currentTime);
-    this.progressBar.innerText = progress.toString();
+    this.progressBar.innerText = this.fancyTimeFormat(progress).toString()
   });
   this.frente.addEventListener('click',() => {
     this.videoPlayer.currentTime += 5
@@ -63,6 +76,7 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   })
   }
 }
+
 
 const videoPlayer = new VideoPlayer({
   videoPlayer: document.querySelector('.video') as HTMLVideoElement,
