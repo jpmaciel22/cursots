@@ -78,8 +78,13 @@ export default class VideoPlayer implements VideoPlayerProtocol{
     this.videoPlayer.currentTime -= 5
   })
   this.velocidade.addEventListener('click',() => {
-    this.videoPlayer.playbackRate = 1.0
-    this.videoPlayer.playbackRate = (this.videoPlayer.playbackRate * 4)
+    if(this.videoPlayer.playbackRate == 1.0){
+      this.velocidade.innerText = '1x'
+      this.videoPlayer.playbackRate = 4.0;
+    }else{
+      this.videoPlayer.playbackRate = 1.0
+      this.velocidade.innerText = '4x'
+    }
   })
   }
 }
