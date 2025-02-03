@@ -5,6 +5,7 @@ interface VideoPlayerElements{
   progressBar: HTMLParagraphElement;
   frente: HTMLButtonElement;
   tras: HTMLButtonElement;
+  velocidade: HTMLButtonElement;
 }
 
 interface VideoPlayerProtocol {
@@ -19,6 +20,7 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   private progressBar: HTMLParagraphElement;
   private frente: HTMLButtonElement;
   private tras: HTMLButtonElement;
+  private velocidade: HTMLButtonElement;
 
   constructor(videoPlayerElements: VideoPlayerElements){
     this.videoPlayer = videoPlayerElements.videoPlayer;
@@ -27,6 +29,7 @@ export default class VideoPlayer implements VideoPlayerProtocol{
     this.progressBar = videoPlayerElements.progressBar;
     this.frente = videoPlayerElements.frente;
     this.tras = videoPlayerElements.tras;
+    this.velocidade = videoPlayerElements.velocidade;
   }
   fancyTimeFormat(duration: number) {
     // Hours, minutes and seconds
@@ -74,6 +77,10 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   this.tras.addEventListener('click',() => {
     this.videoPlayer.currentTime -= 5
   })
+  this.velocidade.addEventListener('click',() => {
+    this.videoPlayer.playbackRate = 1.0
+    this.videoPlayer.playbackRate = (this.videoPlayer.playbackRate * 4)
+  })
   }
 }
 
@@ -83,7 +90,8 @@ const videoPlayer = new VideoPlayer({
   stopButton: document.querySelector('.stop') as HTMLButtonElement,
   progressBar: document.querySelector('.progress') as HTMLParagraphElement,
   frente: document.querySelector('.frente') as HTMLButtonElement,
-  tras: document.querySelector('.tras') as HTMLButtonElement
+  tras: document.querySelector('.tras') as HTMLButtonElement,
+  velocidade: document.querySelector('.velocidade') as HTMLButtonElement
 })
 
 videoPlayer.executarPrograma();
