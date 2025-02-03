@@ -32,7 +32,7 @@ export default class VideoPlayer implements VideoPlayerProtocol{
     // Hours, minutes and seconds
     const hrs = ~~(duration / 3600);
     const mins = ~~((duration % 3600) / 60);
-    const secs = ~~duration % 60;
+    const secs = ~~duration % 60;                    // ~~ transforma em INTEGER... INSANO..
 
     // Output like "1:01" or "4:03:59" or "123:03:59"
     let ret = "";
@@ -65,7 +65,7 @@ export default class VideoPlayer implements VideoPlayerProtocol{
     this.playButton.innerText = 'Play'
   })
   this.videoPlayer.addEventListener('timeupdate', () => {
-    const progress = Math.trunc(this.videoPlayer.currentTime);
+    const progress = Math.trunc(this.videoPlayer.currentTime); // pra transformar em integer
     this.progressBar.innerText = this.fancyTimeFormat(progress).toString()
   });
   this.frente.addEventListener('click',() => {
