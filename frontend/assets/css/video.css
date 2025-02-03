@@ -68,3 +68,8 @@ body {
 .controls button:hover {
   opacity: 1;
 }
+
+.controls p{
+  color:#fff;
+  background: var(--main-color);
+}
