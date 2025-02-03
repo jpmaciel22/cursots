@@ -1,7 +1,7 @@
 const path = require('path');
 // configura o frontend
 module.exports = {
-  entry: './src/projeto-cadastro/index.ts',
+  entry: './src/interfaces-classes-video/index.ts',
   module: {
     rules: [
       {
