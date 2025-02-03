@@ -3,6 +3,8 @@ interface VideoPlayerElements{
   playButton: HTMLButtonElement;
   stopButton: HTMLButtonElement;
   progressBar: HTMLParagraphElement;
+  frente: HTMLButtonElement;
+  tras: HTMLButtonElement;
 }
 
 interface VideoPlayerProtocol {
@@ -16,12 +18,16 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   private playButton: HTMLButtonElement;
   private stopButton: HTMLButtonElement;
   private progressBar: HTMLParagraphElement;
+  private frente: HTMLButtonElement;
+  private tras: HTMLButtonElement;
 
   constructor(videoPlayerElements: VideoPlayerElements){
     this.videoPlayer = videoPlayerElements.videoPlayer;
     this.playButton = videoPlayerElements.playButton;
     this.stopButton = videoPlayerElements.stopButton;
     this.progressBar = videoPlayerElements.progressBar;
+    this.frente = videoPlayerElements.frente;
+    this.tras = videoPlayerElements.tras;
   }
 
   playToggle(): void{
@@ -48,8 +54,13 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   this.videoPlayer.addEventListener('timeupdate', () => {
     const progress = Math.trunc(this.videoPlayer.currentTime);
     this.progressBar.innerText = progress.toString();
-
   });
+  this.frente.addEventListener('click',() => {
+    this.videoPlayer.currentTime += 5
+  })
+  this.tras.addEventListener('click',() => {
+    this.videoPlayer.currentTime -= 5
+  })
   }
 }
 
@@ -57,7 +68,9 @@ const videoPlayer = new VideoPlayer({
   videoPlayer: document.querySelector('.video') as HTMLVideoElement,
   playButton:document.querySelector('.play') as HTMLButtonElement,
   stopButton: document.querySelector('.stop') as HTMLButtonElement,
-  progressBar: document.querySelector('.progress') as HTMLParagraphElement
+  progressBar: document.querySelector('.progress') as HTMLParagraphElement,
+  frente: document.querySelector('.frente') as HTMLButtonElement,
+  tras: document.querySelector('.tras') as HTMLButtonElement
 })
 
 videoPlayer.executarPrograma();
