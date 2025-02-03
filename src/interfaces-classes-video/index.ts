@@ -77,7 +77,6 @@ export default class VideoPlayer implements VideoPlayerProtocol{
   }
 }
 
-
 const videoPlayer = new VideoPlayer({
   videoPlayer: document.querySelector('.video') as HTMLVideoElement,
   playButton:document.querySelector('.play') as HTMLButtonElement,
