@@ -4,8 +4,10 @@ type FilterCallback = (
   index?: number,
 ) => boolean;
 
-function MyFilterFunction(array: unknown[], callbackfn: FilterCallback): unknown[]{
-
+export function MyFilterFunction<TipoGenerico>(
+  array: TipoGenerico[],
+  callbackfn: FilterCallback
+): TipoGenerico[]{
   const novoArray = [];
 
   for(let i = 0;i<array.length;i++){
