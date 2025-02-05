@@ -5,6 +5,8 @@ type ObtainKeyFn = <T,U extends keyof T>(obj: T,key: U) => T[U];
 
 const objeto = {
   macarena: 'cosa buena',
+  idade: 10,
+  instrumentos: ['baixo','guitarra']
 }
 
 const obterKey: ObtainKeyFn = (objeto, chave) => {
@@ -15,5 +17,8 @@ const obterKey: ObtainKeyFn = (objeto, chave) => {
 //   return objeto[chave];
 // }
 
-console.log(obterKey(objeto,'macarena'));
+const macarena = obterKey(objeto,'macarena')
+const instrumentos = obterKey(objeto,'instrumentos')
+const age = obterKey(objeto,'idade')
+console.log(macarena,instrumentos,age)
 
