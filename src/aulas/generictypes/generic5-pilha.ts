@@ -12,7 +12,7 @@ const carro4 = new Ford<string,number>('Focus',2016);
 
 export class Pilha<T>{
   private contador = 0;
-  private elementos: {[elemento:number]:T} = {};
+  private elementos: {[indice:number]:T} = {};
 
   push(elemento: T):void{
     this.elementos[this.contador] = elemento
