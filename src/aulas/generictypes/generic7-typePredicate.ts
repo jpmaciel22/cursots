@@ -17,3 +17,5 @@ export function soma<G>(...args: G[]): number | null{
 // reclamava de soma de NUMBER COM G.
 //  portanto precisamos afirmar na primeira funcao q o retorno DAQUELE BOOLEAN é que O VALOR É UM NUMERO
 // entao ele precisa desse contexto a mais sobre o que aqle true retornado significa.
+
+console.log(soma(1,2,3,4,1,2,45,60))
