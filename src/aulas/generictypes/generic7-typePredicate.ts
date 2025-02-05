@@ -2,7 +2,7 @@ export function isNumber(value: unknown): value is number /**boolean */ {
   return typeof value === 'number'
 };
 
-export function soma<G>(...args: G[]): number | null{
+export function soma<G>(...args: G[]): number{
   const retorno = args.reduce((sum,value)=>{
     if(isNumber(value) && isNumber(sum)){
       return sum + value;
