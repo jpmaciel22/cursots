@@ -33,7 +33,7 @@ export class Pilha<T>{
   }
 }
 
-const pilhuda = new Pilha
+const pilhuda = new Pilha();
 pilhuda.push(1)
 pilhuda.pop()
 pilhuda.push(2)
