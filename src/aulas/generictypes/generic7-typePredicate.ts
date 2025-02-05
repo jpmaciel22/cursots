@@ -19,3 +19,5 @@ export function soma<G>(...args: G[]): number{
 // entao ele precisa desse contexto a mais sobre o que aqle true retornado significa.
 
 console.log(soma(1,2,3,4,1,2,45,60))
+console.log(soma('a','b','c'))
+// console.log(soma(...[1, 2, 3, 'a', 'b', 'c']))
