@@ -33,7 +33,9 @@ export class Pilha<T>{
   }
 }
 
-const pilhuda = new Pilha();
+const pilhuda = new Pilha<number | string>(); // aqui no caso tivemos que inferir com <number | string>
+// pois ele nao conseguiria adivinhar o que seria pushado, já que apenas temos o tipo inserido quando
+// executamos o metodo.. entao ficaria como any ou unknown se nao inferissemos.
 pilhuda.push(1)
 pilhuda.pop()
 pilhuda.push(2)
