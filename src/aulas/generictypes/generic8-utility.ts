@@ -61,3 +61,29 @@ type ABC = 'A' | 'B' | 'C';
 type CDE = 'C' | 'D' | 'E';
 type TipoExtract = Extract<ABC,CDE> //C
 type TipoExclude = Exclude<ABC,CDE> //A,B
+
+//
+type AccountMongo = {
+  _id: string,
+  nome: string,
+  password: string,
+};
+// type AccountAPI = {
+//   id: string,
+//   nome: string,
+//   password: string,
+// }
+
+type AccountAPI = Pick<AccountMongo, Exclude<keyof AccountMongo, '_id'>> & {
+  id:string;
+};
+const accountMongo: AccountMongo = {
+  _id: 'ajsdadjocxv8',
+  nome: 'Joao',
+  password: 'mzjuvnxviu9'
+}
+function mapAccount(accountMongo: AccountMongo): AccountAPI{
+  const {_id,...accountData} = accountMongo;
+  return {...accountData, id: _id};
+}
+
