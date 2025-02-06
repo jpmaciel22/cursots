@@ -9,7 +9,9 @@
       "strict": true,
       "esModuleInterop": true,
       "noEmitOnError": true,
-
+      //pode comentar depois esses 2 de decorators abaixo se der problema.
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
     },
     "include": [
       "./src"

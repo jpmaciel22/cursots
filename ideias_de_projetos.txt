@@ -1,0 +1,84 @@
+1. To-Do List Avançada (CONCLUÍDO)
+
+    Crie uma aplicação de "To-Do List" onde os itens podem ser adicionados, marcados como concluídos e removidos.
+    Desafio extra: Armazene as tarefas em localStorage ou em um banco de dados, assim elas persistem mesmo depois de atualizar a página.
+
+2. Jogo da Forca
+
+    Crie o clássico jogo da forca, onde o usuário tem que adivinhar as letras de uma palavra antes de atingir o número máximo de tentativas.
+    Desafio extra: Adicione uma pontuação que aumente ou diminua com base no tempo e nas tentativas.
+
+3. Conversor de Moeda
+
+    Desenvolva um conversor de moeda que pegue taxas de câmbio em tempo real através de uma API e converta valores entre diferentes moedas.
+    Desafio extra: Permita que o usuário selecione a moeda de origem e destino dinamicamente.
+
+4. Clone do Instagram
+
+    Crie uma versão simples do Instagram, onde os usuários podem fazer upload de fotos, ver a timeline e curtir posts.
+    Desafio extra: Implemente o sistema de login e gerenciamento de sessões (você pode usar o localStorage para simular uma autenticação).
+
+5. Calculadora Científica
+
+    Desenvolva uma calculadora com funções matemáticas avançadas como logaritmos, trigonometria e raiz quadrada.
+    Desafio extra: Implemente uma funcionalidade para armazenar os cálculos passados (histórico).
+
+6. Buscador de Filmes (API de Filmes)
+
+    Use uma API pública como a OMDB API para buscar filmes por nome, ano ou gênero e exibir informações como sinopse, elenco, etc.
+    Desafio extra: Filtre os resultados com base em avaliações ou classificação e mostre filmes populares ou mais bem avaliados.
+
+7. Chat em Tempo Real
+
+    Crie um aplicativo de chat simples com JavaScript, onde várias pessoas podem conversar ao mesmo tempo.
+    Desafio extra: Use o Firebase ou WebSockets para comunicação em tempo real, sem precisar recarregar a página.
+
+8. Trivia ou Quiz Interativo
+
+    Crie um quiz interativo com perguntas de múltipla escolha. Após o usuário responder, mostre a pontuação e a correção das respostas.
+    Desafio extra: Adicione um timer para aumentar a dificuldade e implemente um sistema de leaderboard para registrar as melhores pontuações.
+
+9. Tic-Tac-Toe (Jogo da Velha)
+
+    Desenvolva o clássico jogo da velha onde dois jogadores podem jogar entre si ou jogar contra o computador (AI simples).
+    Desafio extra: Adicione a funcionalidade de salvar o estado do jogo para continuar mais tarde, ou faça um modo online onde duas pessoas jogam pela internet.
+
+10. API de Clima
+
+    Use uma API de clima como OpenWeather para mostrar informações sobre o clima em tempo real para a localização do usuário.
+    Desafio extra: Exiba as previsões para os próximos dias e forneça ícones diferentes dependendo do clima (ensolarado, nublado, chuvoso).
+
+11. Relógio e Temporizador
+
+    Crie um relógio digital que mostra a hora atual e um temporizador para contar o tempo de uma tarefa ou evento.
+    Desafio extra: Faça um cronômetro reverso que avisa quando o tempo acabar (pode usar sons ou notificações).
+
+12. Galeria de Imagens
+
+    Desenvolva uma galeria de imagens onde o usuário pode visualizar imagens em miniatura e clicar para expandi-las em tamanho maior.
+    Desafio extra: Implemente um efeito de animação suave ao abrir ou fechar as imagens.
+
+13. Sistema de Notas
+
+    Crie um aplicativo para o usuário adicionar e organizar notas, como um bloco de notas digital.
+    Desafio extra: Permita a edição e a exclusão das notas, além de adicionar um sistema de categorização (ex: Trabalho, Estudos, Pessoal).
+
+14. Blog Simples
+
+    Desenvolva um blog simples onde você pode criar, editar, e excluir posts.
+    Desafio extra: Adicione autenticação (simulada, se preferir) para que apenas usuários registrados possam criar posts.
+
+15. Desafio de Algoritmos
+
+    Resolva desafios de algoritmos e estruturas de dados em plataformas como LeetCode, HackerRank ou Codewars.
+    Esses desafios vão te ajudar a aprimorar a lógica de programação e melhorar sua capacidade de resolver problemas complexos.
+
+16. Analisador de Sentimento (AI)
+
+    Crie uma aplicação que analisa o sentimento de um texto (positivo, negativo, neutro) usando uma API ou biblioteca de processamento de linguagem natural.
+    Desafio extra: Adicione uma interface que permita ao usuário inserir textos e veja os resultados em tempo real.
+
+17. Jogo de Memória
+
+    Faça um jogo de memória simples onde o usuário deve encontrar pares de cartas iguais.
+    Desafio extra: Adicione um temporizador e uma pontuação que varia dependendo do tempo que leva para completar o jogo.
