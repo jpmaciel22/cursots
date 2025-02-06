@@ -1,3 +1,5 @@
+
+// @decorator
 export class Animal{
   constructor(public cor:string,nome:string){}
 }
@@ -25,6 +27,6 @@ function decorator<T extends new (...args: any[]) => any>(target: T):T{
 // que ja estejam definidas... porém necessite mudar algo sem mexer no código.
 
 
-const AnimalDecorated = decorator(Animal)
+const AnimalDecorated = decorator(Animal) // ou utilizar o @decorator em cima da classe
 const animal = new AnimalDecorated('PRETO','cachorrinho');
 console.log(animal)
