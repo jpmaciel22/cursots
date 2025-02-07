@@ -84,4 +84,4 @@
     Desafio extra: Adicione um temporizador e uma pontuação que varia dependendo do tempo que leva para completar o jogo.
 18. APP POMODORO
 
--- faltam assistir às seções 12,13,17,24,25,26,28,29,31,33,34
+-- faltam assistir às seções 12(ssh),13(api rest),17(regex),25(ts),26(ts),28(ts),29,31,33(html e css),34(landing page)
