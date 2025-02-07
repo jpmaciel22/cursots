@@ -10,6 +10,6 @@
       "noEmitOnError": true,
     },
     "include": [
-      "./src/projeto-moeda/index.ts"
+      "./src"
     ]
   }
