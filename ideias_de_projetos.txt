@@ -8,7 +8,7 @@
     Crie o clássico jogo da forca, onde o usuário tem que adivinhar as letras de uma palavra antes de atingir o número máximo de tentativas.
     Desafio extra: Adicione uma pontuação que aumente ou diminua com base no tempo e nas tentativas.
 
-3. Conversor de Moeda
+3. Conversor de Moeda (CONCLUÍDO)
 
     Desenvolva um conversor de moeda que pegue taxas de câmbio em tempo real através de uma API e converta valores entre diferentes moedas.
     Desafio extra: Permita que o usuário selecione a moeda de origem e destino dinamicamente.
@@ -82,3 +82,6 @@
 
     Faça um jogo de memória simples onde o usuário deve encontrar pares de cartas iguais.
     Desafio extra: Adicione um temporizador e uma pontuação que varia dependendo do tempo que leva para completar o jogo.
+18. APP POMODORO
+
+-- faltam assistir às seções 12,13,17,24,25,26,28,29,31,33,34
