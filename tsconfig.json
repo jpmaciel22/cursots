@@ -12,6 +12,7 @@
       //pode comentar depois esses 2 de decorators abaixo se der problema.
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
+      "allowJs": true, // pode comentar depois.
     },
     "include": [
       "./src"
