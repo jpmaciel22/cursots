@@ -43,7 +43,7 @@ export default class Aplicativo implements Metodos {
     this.fetchData(de, para, valorInserido);
     };
     private async fetchData(de: string, para: string, valorInserido: string) {
-        const url = `https://economia.awesomeapi.com.br/json/last/${de}-${para}`;
+        const url = 'https://economia.awesomeapi.com.br/json/last/'+ de+'-'+para;
         const response = await fetch(url);
         const dadosObtidos = await response.json();
         const valorHigh: string = dadosObtidos[de+para]?.high;
